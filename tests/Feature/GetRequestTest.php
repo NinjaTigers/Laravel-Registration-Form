@@ -1,6 +1,6 @@
 <?php
 
-it('returns a successful response', function () {
+test('Get Request Testing', function () {
     $response = $this->get('/');
 
     $response->assertStatus(200);
