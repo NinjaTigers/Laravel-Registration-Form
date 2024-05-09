@@ -27,7 +27,7 @@ class UserController extends Controller
         $fields['image'] = time() . '.' . $file->getClientOriginalExtension();   }
         User::create($fields); 
         
-            return $fields;
+            return view('welcome')->with('message', 'You Registered Successfully');
 
     }
 
