@@ -55,7 +55,12 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-
+        'uploads' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/uploads'), // Specify the root directory for file storage
+            'url' => env('APP_URL').'/storage/uploads', // Optional: Specify the public URL for accessing uploaded files
+            'visibility' => 'public', // Optional: Set the default visibility for uploaded files
+        ],
     ],
 
     /*

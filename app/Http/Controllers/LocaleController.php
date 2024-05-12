@@ -14,6 +14,5 @@ class LocaleController extends Controller
             Session::put('locale',$lang);
         }
         return back();
-
     }
 }
