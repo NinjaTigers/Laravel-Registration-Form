@@ -2,28 +2,28 @@ echo `<footer id="footer">
     <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>About Us</h5>
-                <p>We are a Student Affairs Website. This is our Registration Page.</p>
+                <h5>@lang('form.about-us')</h5>
+                <p>@lang('form.about-us-description')</p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>Quick links</h5>
+                <h5>@lang('form.quick-links')</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.Home')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.about-us')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.faq')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.get-started')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.videos')</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>Quick links</h5>
+                <h5>@lang('form.quick-links')</h5>
                 <ul class="list-unstyled quick-links">
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.Home')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.about-us')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.faq')</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>@lang('form.get-started')</a></li>
                     <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i
-                                class="fa fa-angle-double-right"></i>Imprint</a></li>
+                                class="fa fa-angle-double-right"></i>@lang('form.imprint')</a></li>
                 </ul>
             </div>
         </div>
@@ -42,11 +42,10 @@ echo `<footer id="footer">
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p><u><a href="http://newecom.fci.cu.edu.eg/#/">The Faculty of Computers and Artificial Intelligence</a></u>
-                    is a
-                    Registered MSP/ISO of Elavon, Inc. Georgia</p>
-                <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com"
-                                                          target="_blank">FCAI-CU</a></p>
+                <p><u><a href="http://newecom.fci.cu.edu.eg/#/">@lang('form.organization-name')</a></u>
+                    @lang('form.organization-desc')</p>
+                <p class="h6">@lang('form.copyright-claim')<a class="text-green ml-2" href="https://www.sunlimetech.com"
+                                                          target="_blank"> @lang('form.org-name-short')</a></p>
             </div>
             </hr>
         </div>
