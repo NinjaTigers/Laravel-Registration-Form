@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RegisterationMail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
-{   
+{
     public function register(Request $request){
-        
+
         $fields = $request->validate([
             'password'=> 'required',
             'name'=> 'required',
@@ -26,9 +28,11 @@ class UserController extends Controller
         if($request->hasFile('image')){
         $file = $request->file('image');
         $fields['image'] = time() . '.' . $file->getClientOriginalExtension();   }
-        User::create($fields); 
-        
-            return view('welcome')->with('message', 'You Registered Successfully');
+        User::create($fields);
+
+        Mail::to('alyeyad03@gmail.com')->send(new RegisterationMail($fields['username']));
+
+        return view('welcome')->with('message', 'You Registered Successfully');
 
     }
 
@@ -38,9 +42,9 @@ class UserController extends Controller
         $file = $request->file('image');
         $fileName = time() . '.' . $file->getClientOriginalExtension();
 
-        $path = Storage::putFileAs('uploads', $file, $fileName); 
+        $path = Storage::putFileAs('uploads', $file, $fileName);
 
-        
+
     }
 }
 
