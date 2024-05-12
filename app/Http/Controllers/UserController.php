@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 /* Emails are sent:
     * From: web13123@outlook.com
     * To: web29711@gmail.com
+    * Password for both accounts: Web12345#
 */
 
 class UserController extends Controller
@@ -40,8 +41,15 @@ class UserController extends Controller
         Mail::to('web29711@gmail.com')->send(new RegistrationMail($fields['username']));
 
 
-        return view('welcome')->with('message', 'You Registered Successfully');
+        // Clear old form input values from session
+        $request->session()->forget(['name', 'email', 'password', 'confirm-password', 'username',
+            'phone', 'birthdate', 'address']);
 
+        // Flash success message to session
+        $request->session()->flash('message', "You Registered Successfully");
+
+        // Redirect to root route with message
+        return redirect('/');
     }
 
     public function store(Request $request)
