@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 /* Emails are sent:
     * From: web13123@outlook.com
-    * To: web8271@outlook.com
-    * Password for both emails: Web12345#
+    * To: web29711@gmail.com
 */
 
 class UserController extends Controller
@@ -38,7 +37,7 @@ class UserController extends Controller
         }
         User::create($fields);
 
-        Mail::to('alyeyad03@gmail.com')->send(new RegistrationMail($fields['username']));
+        Mail::to('web29711@gmail.com')->send(new RegistrationMail($fields['username']));
 
 
         return view('welcome')->with('message', 'You Registered Successfully');
