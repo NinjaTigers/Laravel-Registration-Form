@@ -21,6 +21,27 @@
         </div>
     </div>
 
+    <div class="modal" tabindex="-1" role="dialog" id="actor-modal" style="overflow-y: auto;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actors born on your birthday</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="actor-modal-x-btn"
+                            onclick="closeActorModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="actor-modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="actor-modal-close-btn"
+                            onclick="closeActorModal()">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="wrapper">
         <form action="/register" method="POST" onsubmit="return confirmRedirect()" enctype="multipart/form-data">

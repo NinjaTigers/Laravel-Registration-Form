@@ -33,6 +33,11 @@ function closeModal() {
     myModal.style.display = 'none';
 }
 
+function closeActorModal() {
+    const actorModal = document.getElementById('actor-modal');
+    actorModal.classList.remove('show');
+    actorModal.style.display = 'none';
+}
 
 function confirmRedirect() {
     let errorList = [];

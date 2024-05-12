@@ -33,7 +33,27 @@ function getActorsBornOnDate(month, day) {
                 });
 
                 // TODO change the way the results will be displayed
-                alert(JSON.stringify(mappedActorsJSON));
+                // TODO change the way the results will be displayed
+                // Get a reference to the modal element
+                const myModal = document.getElementById('actor-modal');
+
+// The modal body is where the error description goes
+                const modalBody = document.getElementById("actor-modal-body");
+
+                let modalBodyHTML = ``
+
+                for (let actor of mappedActorsJSON)
+                {
+                    console.log(actor);
+                    console.log(actor["actor_name"]);
+                    console.log(actor["birth_year"]);
+                    modalBodyHTML += `<p style="color: black;">${actor["actor_name"]}: ${actor["birth_year"]}</p>`
+                }
+                modalBody.innerHTML = modalBodyHTML;
+
+                // Showing the popup
+                myModal.classList.add('show');
+                myModal.style.display = 'block';
             } else {
                 // TODO replace alert with different method to report errors
                 alert(`"Request failed with status:", ${this.status}`)
