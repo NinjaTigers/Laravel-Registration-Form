@@ -40,6 +40,7 @@ class UserController extends Controller
 
         Mail::to('web29711@gmail.com')->send(new RegistrationMail($fields['username']));
 
+        $this->store($request);
 
         // Clear old form input values from session
         $request->session()->forget(['name', 'email', 'password', 'confirm-password', 'username',
